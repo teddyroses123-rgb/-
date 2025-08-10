@@ -122,9 +122,10 @@ function App() {
         {/* Main hero content */}
         <div className="py-16 px-4 relative z-10" style={{
           backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          minHeight: '500px'
         }}>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
