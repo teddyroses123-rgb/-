@@ -128,7 +128,7 @@ function App() {
           minHeight: '500px'
         }}>
           {/* Gradient overlay for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-white/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-white/5 pointer-events-none"></div>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
