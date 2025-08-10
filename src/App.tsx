@@ -67,9 +67,9 @@ function App() {
         </div>
         
         {/* Top contact bar */}
-        <div className="bg-white bg-opacity-60 backdrop-blur-sm py-4 px-4 relative z-10">
+        <div className="bg-white bg-opacity-60 backdrop-blur-sm py-2 md:py-4 px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 w-full">
+            <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-8 w-full">
               {/* Company Logo and Name */}
               <div className="flex items-center space-x-3">
                 <div className="bg-blue-600 p-2 rounded-lg">
@@ -82,8 +82,99 @@ function App() {
               </div>
               
               {/* Social Media Icons and Phone - Mobile: right side */}
-              <div className="flex flex-col items-end md:items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2 ml-auto md:ml-0">
-                <a
+              <div className="absolute top-2 right-4 md:relative md:top-auto md:right-auto flex flex-col items-end md:items-center space-y-1 md:space-y-0 md:flex-row md:space-x-2 ml-auto md:ml-0">
+                <div className="flex space-x-1 md:space-x-2">
+                  <a
+                    href="https://t.me/akvadnipro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 p-1.5 md:p-2 rounded-lg transition-colors"
+                  >
+                    <MessageCircle className="w-3 h-3 md:w-4 md:h-4 text-white" />
+                  </a>
+                  <a
+                    href="https://instagram.com/akvadnipro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-pink-500 hover:bg-pink-600 p-1.5 md:p-2 rounded-lg transition-colors"
+                  >
+                    <Instagram className="w-3 h-3 md:w-4 md:h-4 text-white" />
+                  </a>
+                </div>
+                
+                {/* Phone Number */}
+                <a 
+                  href="tel:+380671234567" 
+                  className="text-blue-800 hover:text-blue-900 font-bold text-sm md:text-base lg:text-lg transition-colors"
+                >
+                  +380 67 123 45 67
+                </a>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center">
+              <Mail className="w-5 h-5 text-blue-600 mr-2" />
+              <a 
+                href="mailto:info@akvadnipro.com" 
+                className="text-blue-800 hover:text-blue-900 font-medium transition-colors"
+              >
+                info@akvadnipro.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main hero content */}
+        <div className="py-4 md:py-16 px-4 relative z-10" style={{
+          backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
+          backgroundSize: 'contain',
+          backgroundPosition: 'right top',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '300px'
+        }}>
+          {/* Gradient overlay for smooth transition */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/30 to-white/5 pointer-events-none"></div>
+          
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 md:gap-12 items-center">
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-6xl font-bold text-blue-900 mb-3 md:mb-6 leading-tight">
+                Чиста вода —<br/>
+                без зайвих рухів
+              </h2>
+              <p className="text-base md:text-2xl text-blue-700 mb-4 md:mb-8 font-medium">
+                Доставка питної води<br/>
+                для дому, офісу та бізнесу
+              </p>
+              <a 
+                href="#order" 
+                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 md:py-4 px-4 md:px-8 rounded-full text-sm md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Замовити воду
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* About */}
+      <section className="py-8 md:py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-6">
+            Чиста вода для вашого дому та офісу в Дніпрі
+          </h3>
+          <p className="text-sm md:text-lg text-gray-600 mb-4 md:mb-8 leading-relaxed max-w-3xl mx-auto">
+            Ми працюємо в Дніпрі вже понад 8 років і доставляємо високоякісну питну воду 
+            від перевірених виробників. Наша вода проходить багатоступеневу очистку та 
+            регулярно тестується в сертифікованих лабораторіях.
+          </p>
+        </div>
+      </section>
+
+      {/* Advantages */}
+      <section className="py-10 md:py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">
+            Чому обирають саме нас?
+          </h3>
                   href="https://t.me/akvadnipro"
                   target="_blank"
                   rel="noopener noreferrer"
