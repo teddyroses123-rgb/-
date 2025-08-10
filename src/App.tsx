@@ -84,7 +84,7 @@ function App() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Доставка питьевої води<br/>
+            Доставка питної води<br/>
             <span className="text-blue-200">прямо до дверей</span>
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
