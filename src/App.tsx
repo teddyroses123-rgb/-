@@ -38,12 +38,44 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4">
+      <header className="relative bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4 overflow-hidden">
+        {/* Background water bottle and effects */}
+        <div className="absolute inset-0 opacity-20">
+          {/* Large 20L bottle in background */}
+          <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
+            <div className="w-32 h-48 bg-gradient-to-b from-blue-200 to-blue-300 rounded-t-2xl rounded-b-lg relative">
+              {/* Bottle cap */}
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-12 h-6 bg-blue-400 rounded-t-lg"></div>
+              <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-3 bg-blue-500 rounded-t-md"></div>
+              
+              {/* Water inside bottle */}
+              <div className="absolute bottom-1 left-1 right-1 top-6 bg-gradient-to-b from-blue-100 to-blue-200 rounded-t-xl rounded-b-md opacity-60"></div>
+              
+              {/* 20L label */}
+              <div className="absolute top-12 left-2 right-2 h-16 bg-white bg-opacity-40 rounded-md flex items-center justify-center">
+                <span className="text-blue-800 font-bold text-sm">20L</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Water splash effects */}
+          <div className="absolute top-4 left-20 w-24 h-24 bg-blue-300 rounded-full blur-xl"></div>
+          <div className="absolute bottom-4 left-40 w-32 h-32 bg-blue-400 rounded-full blur-2xl"></div>
+          <div className="absolute top-8 right-40 w-16 h-16 bg-blue-300 rounded-full blur-lg"></div>
+          
+          {/* Water droplets */}
+          <div className="absolute top-6 left-32 w-2 h-2 bg-blue-200 rounded-full"></div>
+          <div className="absolute top-12 left-48 w-3 h-3 bg-blue-300 rounded-full"></div>
+          <div className="absolute bottom-8 left-24 w-2 h-2 bg-blue-200 rounded-full"></div>
+          <div className="absolute bottom-12 right-32 w-3 h-3 bg-blue-300 rounded-full"></div>
+          <div className="absolute top-16 right-48 w-2 h-2 bg-blue-200 rounded-full"></div>
+        </div>
+        
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Droplets className="w-8 h-8 mr-2" />
             <div>
-              <span className="text-2xl font-bold block">АкваДнепр</span>
+              <span className="text-2xl font-bold block">АкваДніпро</span>
               <span className="text-sm text-blue-200">Доставка питьевої води</span>
             </div>
           </div>
@@ -54,7 +86,7 @@ function App() {
             </div>
             <div className="flex space-x-2">
               <a
-                href="https://instagram.com/akvadnepr"
+                href="https://instagram.com/akvadnipro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
@@ -62,7 +94,7 @@ function App() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://t.me/akvadnepr"
+                href="https://t.me/akvadnipro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
@@ -460,10 +492,10 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <Droplets className="w-8 h-8 mr-2" />
-            <span className="text-xl font-bold">АкваДнепр</span>
+            <span className="text-xl font-bold">АкваДніпро</span>
           </div>
           <p className="text-gray-400">
-            © 2025 АкваДнепр. Якісна питьева вода з доставкою по Дніпру.
+            © 2025 АкваДніпро. Якісна питна вода з доставкою по Дніпру.
           </p>
         </div>
       </footer>
