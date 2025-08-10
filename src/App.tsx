@@ -40,30 +40,75 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-br from-blue-100 via-blue-50 to-white relative overflow-hidden">
+      <header className="relative overflow-hidden" style={{
+        background: 'linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 25%, #81d4fa 50%, #e1f5fe 75%, #ffffff 100%)',
+      }}>
+        {/* Water effect overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <svg width="100%" height="100%" viewBox="0 0 1200 800" className="absolute inset-0">
+              <defs>
+                <radialGradient id="ripple1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="rgba(33, 150, 243, 0.1)" />
+                  <stop offset="100%" stopColor="rgba(33, 150, 243, 0)" />
+                </radialGradient>
+                <radialGradient id="ripple2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="rgba(3, 169, 244, 0.08)" />
+                  <stop offset="100%" stopColor="rgba(3, 169, 244, 0)" />
+                </radialGradient>
+              </defs>
+              <circle cx="200" cy="150" r="80" fill="url(#ripple1)" className="animate-pulse" />
+              <circle cx="800" cy="300" r="120" fill="url(#ripple2)" className="animate-pulse" style={{animationDelay: '1s'}} />
+              <circle cx="1000" cy="100" r="60" fill="url(#ripple1)" className="animate-pulse" style={{animationDelay: '2s'}} />
+              <path d="M0,400 Q300,350 600,400 T1200,400 L1200,450 Q900,420 600,450 T0,450 Z" fill="rgba(33, 150, 243, 0.05)" className="animate-pulse" />
+              <path d="M0,500 Q400,480 800,500 T1200,500 L1200,530 Q800,510 400,530 T0,530 Z" fill="rgba(3, 169, 244, 0.03)" className="animate-pulse" style={{animationDelay: '1.5s'}} />
+            </svg>
+          </div>
+        </div>
+        
         {/* Top contact bar */}
-        <div className="bg-white bg-opacity-80 py-3 px-4">
+        <div className="bg-white bg-opacity-60 backdrop-blur-sm py-3 px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <Volume2 className="w-4 h-4 text-white" />
-                </div>
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <Phone className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-blue-800 font-bold text-lg">+380 67 123 45 67</span>
+                <a
+                  href="https://t.me/akvadnipro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-700 p-2 rounded-lg transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 text-white" />
+                </a>
+                <a
+                  href="https://instagram.com/akvadnipro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-pink-500 hover:bg-pink-600 p-2 rounded-lg transition-colors"
+                >
+                  <Instagram className="w-4 h-4 text-white" />
+                </a>
+                <a 
+                  href="tel:+380671234567" 
+                  className="text-blue-800 hover:text-blue-900 font-bold text-lg transition-colors"
+                >
+                  +380 67 123 45 67
+                </a>
               </div>
             </div>
             <div className="hidden md:flex items-center">
               <Mail className="w-5 h-5 text-blue-600 mr-2" />
-              <span className="text-blue-800 font-medium">example@email.com</span>
+              <a 
+                href="mailto:info@akvadnipro.com" 
+                className="text-blue-800 hover:text-blue-900 font-medium transition-colors"
+              >
+                info@akvadnipro.com
+              </a>
             </div>
           </div>
         </div>
 
         {/* Main hero content */}
-        <div className="py-16 px-4 relative">
+        <div className="py-16 px-4 relative z-10">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
