@@ -12,7 +12,9 @@ import {
   MapPin,
   Bell,
   Sparkles,
-  Zap
+  Zap,
+  Volume2,
+  Mail
 } from 'lucide-react';
 
 function App() {
@@ -38,66 +40,57 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center">
-            <Droplets className="w-8 h-8 mr-2" />
-            <div>
-              <span className="text-2xl font-bold block">АкваДніпро</span>
-              <span className="text-sm text-blue-200">Доставка питної води</span>
+      <header className="bg-gradient-to-br from-blue-100 via-blue-50 to-white relative overflow-hidden">
+        {/* Top contact bar */}
+        <div className="bg-white bg-opacity-80 py-3 px-4">
+          <div className="max-w-6xl mx-auto flex justify-between items-center">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Volume2 className="w-4 h-4 text-white" />
+                </div>
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Phone className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-blue-800 font-bold text-lg">+380 67 123 45 67</span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center">
+              <Mail className="w-5 h-5 text-blue-600 mr-2" />
+              <span className="text-blue-800 font-medium">example@email.com</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="text-right">
-              <div className="text-lg font-semibold">+38 (056) 278-94-56</div>
-              <div className="text-sm text-blue-200">Працюємо 24/7</div>
+        </div>
+
+        {/* Main hero content */}
+        <div className="py-16 px-4 relative">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
+                Чиста вода —<br/>
+                без зайвих рухів
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-700 mb-8 font-medium">
+                Доставка питної води<br/>
+                для дому, офісу та бізнесу
+              </p>
+              <a 
+                href="#order" 
+                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Замовити воду
+              </a>
             </div>
-            <div className="flex space-x-2">
-              <a
-                href="https://instagram.com/akvadnepr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://t.me/akvadnepr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
-              >
-                <MessageCircle className="w-5 h-5" />
-              </a>
-              <a
-                href="viber://chat?number=+380562789456"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
+            <div className="relative">
+              <img 
+                src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="Бутель з водою" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </header>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Доставка питної води<br/>
-            <span className="text-blue-200">прямо до дверей</span>
-          </h2>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            Швидко • Якісно • Безпечно • З гарантією
-          </p>
-          <a 
-            href="#order" 
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Замовити зараз
-          </a>
-        </div>
-      </section>
 
       {/* About */}
       <section className="py-16 px-4 bg-gray-50">
