@@ -67,9 +67,21 @@ function App() {
         </div>
         
         {/* Top contact bar */}
-        <div className="bg-white bg-opacity-60 backdrop-blur-sm py-3 px-4 relative z-10">
+        <div className="bg-white bg-opacity-60 backdrop-blur-sm py-4 px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-8">
+              {/* Company Logo and Name */}
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Droplets className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-blue-900">АкваДніпро</h1>
+                  <p className="text-sm text-blue-700">Доставка питної води</p>
+                </div>
+              </div>
+              
+              {/* Social Media and Phone */}
               <div className="flex items-center space-x-2">
                 <a
                   href="https://t.me/akvadnipro"
@@ -111,10 +123,10 @@ function App() {
         <div className="py-16 px-4 relative z-10">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
                 Чиста вода —<br/>
                 без зайвих рухів
-              </h1>
+              </h2>
               <p className="text-xl md:text-2xl text-blue-700 mb-8 font-medium">
                 Доставка питної води<br/>
                 для дому, офісу та бізнесу
