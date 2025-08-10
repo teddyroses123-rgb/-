@@ -127,8 +127,11 @@ function App() {
           backgroundRepeat: 'no-repeat',
           minHeight: '500px'
         }}>
+          {/* Gradient overlay for smooth transition */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none"></div>
+          
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
                 Чиста вода —<br/>
                 без зайвих рухів
