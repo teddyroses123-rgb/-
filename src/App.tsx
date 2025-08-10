@@ -140,7 +140,7 @@ function App() {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                src="https://i.ibb.co/8nVcpgpC/image.png" 
                 alt="19-літровий бутель з водою" 
                 className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
               />
