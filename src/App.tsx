@@ -38,109 +38,112 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative bg-gradient-to-br from-sky-200 via-sky-100 to-blue-100 min-h-screen flex items-center px-4 overflow-hidden">
-        {/* Background water splashes and bubbles */}
+      <header className="relative bg-gradient-to-br from-blue-100 via-blue-200 to-cyan-200 text-blue-900 py-8 px-4 overflow-hidden">
+        {/* Water splash background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-1/4 w-32 h-32 bg-blue-300 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-cyan-300 rounded-full blur-lg"></div>
+          <div className="absolute top-1/2 left-1/6 w-16 h-16 bg-blue-400 rounded-full blur-md"></div>
+        </div>
+        
+        {/* Water droplets */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* Large water splash on the left */}
-          <div className="absolute bottom-0 left-0 w-96 h-96">
-            <svg viewBox="0 0 400 400" className="w-full h-full opacity-60">
-              <path d="M0,300 Q50,250 100,280 T200,260 T300,290 T400,270 L400,400 L0,400 Z" fill="url(#waterGradient1)" />
-              <path d="M0,320 Q60,270 120,300 T240,280 T360,310 T400,290 L400,400 L0,400 Z" fill="url(#waterGradient2)" />
-              <defs>
-                <linearGradient id="waterGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.6"/>
-                </linearGradient>
-                <linearGradient id="waterGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.7"/>
-                  <stop offset="100%" stopColor="#0284c7" stopOpacity="0.5"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          
-          {/* Water bubbles scattered around */}
-          <div className="absolute top-20 right-1/4 w-4 h-4 bg-sky-300 rounded-full opacity-70"></div>
-          <div className="absolute top-32 right-1/3 w-3 h-3 bg-blue-300 rounded-full opacity-60"></div>
-          <div className="absolute top-16 right-1/5 w-2 h-2 bg-sky-400 rounded-full opacity-80"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-blue-200 rounded-full opacity-50"></div>
-          <div className="absolute top-1/4 right-1/6 w-3 h-3 bg-sky-300 rounded-full opacity-60"></div>
-          <div className="absolute top-40 right-2/5 w-2 h-2 bg-blue-400 rounded-full opacity-70"></div>
+          <div className="absolute top-16 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+          <div className="absolute top-32 right-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-70"></div>
+          <div className="absolute bottom-40 left-1/4 w-4 h-4 bg-blue-300 rounded-full opacity-50"></div>
+          <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-300 rounded-full opacity-80"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto flex justify-between items-center mb-8">
+          <div className="flex items-center">
+            <Droplets className="w-8 h-8 mr-2 text-blue-600" />
+            <span className="text-xl font-bold text-blue-800">АкваДнепр</span>
+          </div>
+          <div className="hidden md:flex items-center space-x-6">
+            <a 
+              href="tel:+380562789456" 
+              className="flex items-center text-blue-800 hover:text-blue-600 transition-colors font-semibold"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              +38 (056) 278-94-56
+            </a>
+            <div className="flex space-x-3">
+              <a
+                href="https://instagram.com/akvadnepr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 hover:text-pink-500 transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/akvadnepr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 hover:text-blue-500 transition-colors"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
+                href="viber://chat?number=+380562789456"
+                className="text-blue-700 hover:text-purple-500 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left side - Text content */}
-            <div className="text-left relative">
-              {/* Large water drop icon */}
-              <div className="absolute -left-16 top-1/3 w-16 h-20 bg-gradient-to-b from-cyan-400 to-teal-500 rounded-full opacity-80" 
-                   style={{borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%'}}></div>
-              
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-slate-800">
+            <div className="text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
                 Чиста вода —<br/>
-                без зайвих рухів
+                <span className="text-blue-700">без зайвих рухів</span>
               </h1>
-              <div className="mb-12">
-                <p className="text-2xl md:text-3xl text-slate-700 font-medium mb-3">
+              <div className="mb-8">
+                <p className="text-xl md:text-2xl text-blue-800 font-medium mb-2">
                   Доставка питної води
                 </p>
-                <p className="text-xl md:text-2xl text-slate-600">
+                <p className="text-lg md:text-xl text-blue-700">
                   для дому, офісу та бізнесу
                 </p>
               </div>
+              <a 
+                href="#order" 
+                className="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Замовити воду
+              </a>
             </div>
             
-            {/* Right side - Water bottle */}
+            {/* Right side - Water bottle illustration */}
             <div className="relative flex justify-center lg:justify-end">
-              {/* Water splash behind bottle */}
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-80 h-60">
-                <svg viewBox="0 0 320 240" className="w-full h-full opacity-70">
-                  <path d="M50,120 Q100,80 150,110 T250,100 T320,130 Q280,160 230,140 T130,150 T50,120 Z" fill="url(#splashGradient)" />
-                  <defs>
-                    <linearGradient id="splashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#38bdf8" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.4"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
+              {/* Water splash effect */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-64 h-64 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full opacity-20 blur-2xl"></div>
               </div>
               
-              {/* Water bottle */}
-              <div className="relative z-20">
-                <div className="w-40 h-96 bg-gradient-to-b from-sky-100 to-blue-200 rounded-2xl relative shadow-2xl border border-blue-200 overflow-hidden">
+              {/* Bottle representation using CSS */}
+              <div className="relative z-10">
+                <div className="w-32 h-80 bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg relative shadow-lg border-2 border-blue-300">
                   {/* Bottle cap */}
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-12 bg-gradient-to-b from-blue-600 to-blue-700 rounded-t-xl border-2 border-blue-800">
-                    {/* Cap ridges */}
-                    <div className="absolute inset-x-0 top-2 space-y-1">
-                      <div className="h-0.5 bg-blue-800 mx-2 rounded"></div>
-                      <div className="h-0.5 bg-blue-800 mx-2 rounded"></div>
-                      <div className="h-0.5 bg-blue-800 mx-2 rounded"></div>
-                    </div>
-                  </div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-8 bg-blue-500 rounded-t-lg"></div>
                   
-                  {/* Water inside bottle */}
-                  <div className="absolute bottom-0 left-0 right-0 h-5/6 bg-gradient-to-t from-blue-300 via-sky-200 to-blue-100 rounded-b-2xl opacity-90"></div>
+                  {/* Water level */}
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-cyan-200 to-blue-200 rounded-b-lg opacity-80"></div>
                   
-                  {/* Bottle segments */}
-                  <div className="absolute top-20 left-0 right-0 h-px bg-blue-300 opacity-60"></div>
-                  <div className="absolute top-32 left-0 right-0 h-px bg-blue-300 opacity-60"></div>
-                  <div className="absolute top-44 left-0 right-0 h-px bg-blue-300 opacity-60"></div>
-                  <div className="absolute top-56 left-0 right-0 h-px bg-blue-300 opacity-60"></div>
-                  
-                  {/* Water reflection */}
-                  <div className="absolute top-4 left-2 w-8 h-32 bg-white opacity-30 rounded-full blur-sm"></div>
+                  {/* Bottle rings */}
+                  <div className="absolute top-16 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
+                  <div className="absolute top-24 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
+                  <div className="absolute top-32 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
                 </div>
-              </div>
-              
-              {/* Order button positioned like in the image */}
-              <div className="absolute bottom-0 right-0 z-30">
-                <a 
-                  href="#order" 
-                  className="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
-                >
-                  Замовити воду
-                </a>
+                
+                {/* Water droplet icon */}
+                <div className="absolute -left-8 top-1/3 bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center">
+                  <Droplets className="w-5 h-5 text-white" />
+                </div>
               </div>
             </div>
           </div>
