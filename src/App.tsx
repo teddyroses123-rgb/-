@@ -123,7 +123,7 @@ function App() {
         <div className="py-16 px-4 relative z-10" style={{
           backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
           backgroundSize: 'contain',
-          backgroundPosition: 'center',
+          backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
           minHeight: '500px'
         }}>
