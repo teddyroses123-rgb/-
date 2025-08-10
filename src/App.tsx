@@ -143,13 +143,6 @@ function App() {
                 Замовити воду
               </a>
             </div>
-            <div className="relative">
-              <img 
-                src="https://i.ibb.co/8nVcpgpC/image.png" 
-                alt="19-літровий бутель з водою" 
-                className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
-              />
-            </div>
           </div>
         </div>
       </header>
