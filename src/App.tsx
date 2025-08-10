@@ -121,7 +121,7 @@ function App() {
 
         {/* Main hero content */}
         <div className="py-16 px-4 relative z-10" style={{
-          backgroundImage: 'url(https://i.ibb.co/xqZjpJtP/Add-more-droplets-to-1-1.png)',
+          backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
