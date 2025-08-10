@@ -39,25 +39,25 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center mb-8">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Droplets className="w-8 h-8 mr-2" />
-            <span className="text-xl font-bold">АкваДнепр</span>
+            <div>
+              <span className="text-2xl font-bold block">АкваДнепр</span>
+              <span className="text-sm text-blue-200">Доставка питьевої води</span>
+            </div>
           </div>
-          <div className="hidden md:flex items-center space-x-6">
-            <a 
-              href="tel:+380562789456" 
-              className="flex items-center text-white hover:text-blue-200 transition-colors"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              +38 (056) 278-94-56
-            </a>
-            <div className="flex space-x-3">
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="text-right">
+              <div className="text-lg font-semibold">+38 (056) 278-94-56</div>
+              <div className="text-sm text-blue-200">Працюємо 24/7</div>
+            </div>
+            <div className="flex space-x-2">
               <a
                 href="https://instagram.com/akvadnepr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-pink-300 transition-colors"
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -65,19 +65,23 @@ function App() {
                 href="https://t.me/akvadnepr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-300 transition-colors"
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a
                 href="viber://chat?number=+380562789456"
-                className="text-white hover:text-purple-300 transition-colors"
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
         </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Доставка питьевої води<br/>
@@ -93,7 +97,7 @@ function App() {
             Замовити зараз
           </a>
         </div>
-      </header>
+      </section>
 
       {/* About */}
       <section className="py-16 px-4 bg-gray-50">
