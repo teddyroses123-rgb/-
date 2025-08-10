@@ -38,31 +38,16 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative bg-gradient-to-br from-blue-100 via-blue-200 to-cyan-200 text-blue-900 py-8 px-4 overflow-hidden">
-        {/* Water splash background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-1/4 w-32 h-32 bg-blue-300 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-cyan-300 rounded-full blur-lg"></div>
-          <div className="absolute top-1/2 left-1/6 w-16 h-16 bg-blue-400 rounded-full blur-md"></div>
-        </div>
-        
-        {/* Water droplets */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-16 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-          <div className="absolute top-32 right-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-70"></div>
-          <div className="absolute bottom-40 left-1/4 w-4 h-4 bg-blue-300 rounded-full opacity-50"></div>
-          <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-300 rounded-full opacity-80"></div>
-        </div>
-
+      <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center mb-8">
           <div className="flex items-center">
-            <Droplets className="w-8 h-8 mr-2 text-blue-600" />
-            <span className="text-xl font-bold text-blue-800">АкваДнепр</span>
+            <Droplets className="w-8 h-8 mr-2" />
+            <span className="text-xl font-bold">АкваДнепр</span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <a 
               href="tel:+380562789456" 
-              className="flex items-center text-blue-800 hover:text-blue-600 transition-colors font-semibold"
+              className="flex items-center text-white hover:text-blue-200 transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" />
               +38 (056) 278-94-56
@@ -72,7 +57,7 @@ function App() {
                 href="https://instagram.com/akvadnepr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700 hover:text-pink-500 transition-colors"
+                className="text-white hover:text-pink-300 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -80,73 +65,33 @@ function App() {
                 href="https://t.me/akvadnepr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700 hover:text-blue-500 transition-colors"
+                className="text-white hover:text-blue-300 transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a
                 href="viber://chat?number=+380562789456"
-                className="text-blue-700 hover:text-purple-500 transition-colors"
+                className="text-white hover:text-purple-300 transition-colors"
               >
                 <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
         </div>
-        
-        <div className="relative max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left side - Text content */}
-            <div className="text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
-                Чиста вода —<br/>
-                <span className="text-blue-700">без зайвих рухів</span>
-              </h1>
-              <div className="mb-8">
-                <p className="text-xl md:text-2xl text-blue-800 font-medium mb-2">
-                  Доставка питної води
-                </p>
-                <p className="text-lg md:text-xl text-blue-700">
-                  для дому, офісу та бізнесу
-                </p>
-              </div>
-              <a 
-                href="#order" 
-                className="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Замовити воду
-              </a>
-            </div>
-            
-            {/* Right side - Water bottle illustration */}
-            <div className="relative flex justify-center lg:justify-end">
-              {/* Water splash effect */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full opacity-20 blur-2xl"></div>
-              </div>
-              
-              {/* Bottle representation using CSS */}
-              <div className="relative z-10">
-                <div className="w-32 h-80 bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg relative shadow-lg border-2 border-blue-300">
-                  {/* Bottle cap */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-8 bg-blue-500 rounded-t-lg"></div>
-                  
-                  {/* Water level */}
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-cyan-200 to-blue-200 rounded-b-lg opacity-80"></div>
-                  
-                  {/* Bottle rings */}
-                  <div className="absolute top-16 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
-                  <div className="absolute top-24 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
-                  <div className="absolute top-32 left-0 right-0 h-1 bg-blue-300 opacity-60"></div>
-                </div>
-                
-                {/* Water droplet icon */}
-                <div className="absolute -left-8 top-1/3 bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center">
-                  <Droplets className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Доставка питьевої води<br/>
+            <span className="text-blue-200">прямо до дверей</span>
+          </h2>
+          <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            Швидко • Якісно • Безпечно • З гарантією
+          </p>
+          <a 
+            href="#order" 
+            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Замовити зараз
+          </a>
         </div>
       </header>
 
