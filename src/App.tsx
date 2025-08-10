@@ -43,8 +43,8 @@ function App() {
           <div className="flex items-center">
             <Droplets className="w-8 h-8 mr-2" />
             <div>
-              <span className="text-2xl font-bold block">АкваДнепр</span>
-              <span className="text-sm text-blue-200">Доставка питьевої води</span>
+              <span className="text-2xl font-bold block">АкваДніпро</span>
+              <span className="text-sm text-blue-200">Доставка питної води</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
@@ -106,7 +106,7 @@ function App() {
             Чиста вода для вашого дому та офісу в Дніпрі
           </h3>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Ми працюємо в Дніпрі вже понад 8 років і доставляємо високоякісну питьевую воду 
+            Ми працюємо в Дніпрі вже понад 8 років і доставляємо високоякісну питну воду 
             від перевірених виробників. Наша вода проходить багатоступеневу очистку та 
             регулярно тестується в сертифікованих лабораторіях.
           </p>
@@ -179,7 +179,7 @@ function App() {
               <ul className="text-left space-y-2 mb-6">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Очищена питьева вода
+                  Очищена питна вода
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -322,14 +322,14 @@ function App() {
                 Зона доставки
               </h4>
               <p className="text-gray-600 mb-4">
-                Ми доставляємо по всьому Львову та прилеглим районам:
+                Ми доставляємо по всьому Дніпру та прилеглим районам:
               </p>
               <ul className="text-gray-600 space-y-2">
-                <li>• Центр міста</li>
-                <li>• Сихів</li>
-                <li>• Личаків</li>
-                <li>• Замарстинів</li>
-                <li>• Франківський район</li>
+                <li>• Центр</li>
+                <li>• Перемога</li>
+                <li>• Тополь</li>
+                <li>• Сонячний</li>
+                <li>• Чечелівський</li>
               </ul>
             </div>
             
@@ -387,10 +387,10 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <Droplets className="w-8 h-8 mr-2" />
-            <span className="text-xl font-bold">АкваДнепр</span>
+            <span className="text-xl font-bold">АкваДніпро</span>
           </div>
           <p className="text-gray-400">
-            © 2025 АкваДнепр. Якісна питьева вода з доставкою по Дніпру.
+            © 2025 АкваДніпро. Якісна питна вода з доставкою по Дніпру.
           </p>
         </div>
       </footer>
