@@ -81,21 +81,43 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-blue-100 via-blue-50 to-white py-20 px-4 overflow-hidden min-h-[600px]">
-        {/* Water splash background effects */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-300 rounded-full blur-2xl"></div>
-          <div className="absolute top-40 right-40 w-20 h-20 bg-blue-200 rounded-full blur-lg"></div>
+      <section className="relative bg-gradient-to-b from-blue-200 via-blue-100 to-white py-20 px-4 overflow-hidden min-h-[700px]">
+        {/* Water wave background */}
+        <div className="absolute inset-0">
+          {/* Large water wave at bottom */}
+          <div className="absolute bottom-0 left-0 w-full h-64">
+            <svg viewBox="0 0 1200 300" className="w-full h-full">
+              <path d="M0,200 C300,150 600,250 900,180 C1050,140 1150,160 1200,180 L1200,300 L0,300 Z" 
+                    fill="rgba(59, 130, 246, 0.3)" />
+              <path d="M0,220 C200,170 400,240 600,200 C800,160 1000,190 1200,170 L1200,300 L0,300 Z" 
+                    fill="rgba(59, 130, 246, 0.2)" />
+            </svg>
+          </div>
+          
+          {/* Water splash on left */}
+          <div className="absolute left-0 top-1/2 w-96 h-48">
+            <svg viewBox="0 0 400 200" className="w-full h-full">
+              <path d="M0,100 C50,50 100,150 150,80 C200,40 250,120 300,70 C350,30 380,60 400,50 L400,200 L0,200 Z" 
+                    fill="rgba(59, 130, 246, 0.25)" />
+            </svg>
+          </div>
+          
+          {/* Water splash on right */}
+          <div className="absolute right-0 top-1/3 w-80 h-40">
+            <svg viewBox="0 0 320 160" className="w-full h-full">
+              <path d="M320,80 C270,30 220,130 170,60 C120,20 70,100 20,50 C10,40 5,45 0,40 L0,160 L320,160 Z" 
+                    fill="rgba(59, 130, 246, 0.2)" />
+            </svg>
+          </div>
         </div>
         
-        {/* Water droplets scattered around */}
-        <div className="absolute top-16 right-32 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-        <div className="absolute top-32 right-48 w-2 h-2 bg-blue-500 rounded-full opacity-70"></div>
-        <div className="absolute top-48 right-24 w-4 h-4 bg-blue-400 rounded-full opacity-50"></div>
-        <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-        <div className="absolute bottom-48 left-48 w-2 h-2 bg-blue-500 rounded-full opacity-70"></div>
-        <div className="absolute top-24 left-64 w-2 h-2 bg-blue-400 rounded-full opacity-60"></div>
+        {/* Floating water droplets */}
+        <div className="absolute top-20 left-1/4 w-4 h-4 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-32 right-1/3 w-3 h-3 bg-blue-500 rounded-full opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-48 left-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-80 animate-bounce" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 right-1/4 w-3 h-3 bg-blue-500 rounded-full opacity-70 animate-bounce" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-60 left-1/5 w-2 h-2 bg-blue-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-60 right-1/5 w-4 h-4 bg-blue-300 rounded-full opacity-50 animate-bounce" style={{animationDelay: '2.5s'}}></div>
         
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -124,45 +146,78 @@ function App() {
             
             {/* Right side - Water bottle */}
             <div className="relative flex justify-center lg:justify-end">
-              {/* Large water bottle illustration */}
+              {/* 20L Water bottle based on reference */}
               <div className="relative">
-                {/* Bottle body */}
-                <div className="w-48 h-80 bg-gradient-to-b from-blue-100 to-blue-200 rounded-t-3xl rounded-b-lg relative shadow-2xl">
+                {/* 20L Bottle structure */}
+                <div className="relative w-56 h-96">
+                  {/* Bottle neck */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-16 bg-gradient-to-b from-blue-300 to-blue-400 rounded-t-lg shadow-lg"></div>
+                  
                   {/* Bottle cap */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-8 bg-blue-600 rounded-t-lg"></div>
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-12 h-4 bg-blue-700 rounded-t-md"></div>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-14 h-6 bg-blue-600 rounded-t-lg shadow-md"></div>
+                  <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-10 h-3 bg-blue-700 rounded-t-sm"></div>
                   
-                  {/* Water inside bottle */}
-                  <div className="absolute bottom-2 left-2 right-2 top-8 bg-gradient-to-b from-blue-50 to-blue-100 rounded-t-2xl rounded-b-md opacity-80"></div>
-                  
-                  {/* Bottle ridges */}
-                  <div className="absolute top-16 left-0 right-0 h-px bg-blue-300 opacity-50"></div>
-                  <div className="absolute top-32 left-0 right-0 h-px bg-blue-300 opacity-50"></div>
-                  <div className="absolute top-48 left-0 right-0 h-px bg-blue-300 opacity-50"></div>
-                  
-                  {/* Label area */}
-                  <div className="absolute top-20 left-4 right-4 h-32 bg-white bg-opacity-60 rounded-lg flex items-center justify-center">
-                    <span className="text-blue-800 font-bold text-lg">19L</span>
+                  {/* Main bottle body - wider at top, narrower at bottom */}
+                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-52 h-80 bg-gradient-to-b from-blue-200 via-blue-300 to-blue-400 shadow-2xl"
+                       style={{
+                         clipPath: 'polygon(15% 0%, 85% 0%, 90% 15%, 95% 85%, 85% 100%, 15% 100%, 5% 85%, 10% 15%)',
+                         borderRadius: '20px'
+                       }}>
+                    
+                    {/* Water inside bottle */}
+                    <div className="absolute inset-2 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 opacity-90"
+                         style={{
+                           clipPath: 'polygon(15% 5%, 85% 5%, 88% 20%, 92% 80%, 85% 95%, 15% 95%, 8% 80%, 12% 20%)',
+                           borderRadius: '15px'
+                         }}></div>
+                    
+                    {/* Bottle ridges/rings */}
+                    <div className="absolute top-8 left-0 right-0 h-1 bg-blue-400 opacity-60"></div>
+                    <div className="absolute top-16 left-0 right-0 h-1 bg-blue-400 opacity-60"></div>
+                    <div className="absolute top-24 left-0 right-0 h-1 bg-blue-400 opacity-60"></div>
+                    <div className="absolute bottom-16 left-0 right-0 h-1 bg-blue-400 opacity-60"></div>
+                    <div className="absolute bottom-8 left-0 right-0 h-1 bg-blue-400 opacity-60"></div>
+                    
+                    {/* Handle */}
+                    <div className="absolute right-0 top-1/3 w-8 h-16 bg-blue-300 opacity-80"
+                         style={{
+                           clipPath: 'polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%)',
+                           borderRadius: '0 10px 10px 0'
+                         }}></div>
+                    
+                    {/* Label area */}
+                    <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-32 h-20 bg-white bg-opacity-80 rounded-lg flex flex-col items-center justify-center shadow-md">
+                      <Droplets className="w-6 h-6 text-blue-600 mb-1" />
+                      <span className="text-blue-800 font-bold text-sm">АКВДА</span>
+                      <span className="text-blue-800 font-bold text-sm">ДНЕПР</span>
+                      <span className="text-blue-600 text-xs">20L</span>
+                    </div>
                   </div>
+                  
+                  {/* Water reflection highlights */}
+                  <div className="absolute top-16 left-8 w-4 h-32 bg-white opacity-30 rounded-full blur-sm"></div>
+                  <div className="absolute top-24 right-12 w-2 h-24 bg-white opacity-40 rounded-full blur-sm"></div>
                 </div>
                 
                 {/* Water splash effects around bottle */}
-                <div className="absolute -bottom-8 -left-8 w-24 h-16 bg-blue-200 rounded-full opacity-40 blur-sm"></div>
-                <div className="absolute -bottom-4 -right-6 w-20 h-12 bg-blue-300 rounded-full opacity-50 blur-sm"></div>
+                <div className="absolute -bottom-12 -left-12 w-32 h-20 bg-blue-300 rounded-full opacity-30 blur-lg"></div>
+                <div className="absolute -bottom-8 -right-8 w-28 h-16 bg-blue-400 rounded-full opacity-40 blur-md"></div>
+                <div className="absolute top-1/4 -right-16 w-20 h-12 bg-blue-200 rounded-full opacity-25 blur-lg"></div>
                 
                 {/* Floating droplets around bottle */}
-                <div className="absolute top-8 -right-4 w-3 h-3 bg-blue-400 rounded-full opacity-70"></div>
-                <div className="absolute top-24 -left-6 w-4 h-4 bg-blue-500 rounded-full opacity-60"></div>
-                <div className="absolute top-40 -right-8 w-2 h-2 bg-blue-400 rounded-full opacity-80"></div>
-                <div className="absolute bottom-16 -left-4 w-3 h-3 bg-blue-500 rounded-full opacity-70"></div>
-                <div className="absolute bottom-32 -right-6 w-2 h-2 bg-blue-400 rounded-full opacity-60"></div>
+                <div className="absolute top-12 -right-6 w-4 h-4 bg-blue-400 rounded-full opacity-70 animate-pulse"></div>
+                <div className="absolute top-32 -left-8 w-5 h-5 bg-blue-500 rounded-full opacity-60 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute top-48 -right-12 w-3 h-3 bg-blue-400 rounded-full opacity-80 animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-24 -left-6 w-4 h-4 bg-blue-500 rounded-full opacity-70 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                <div className="absolute bottom-40 -right-8 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse" style={{animationDelay: '2s'}}></div>
+                <div className="absolute top-20 -left-4 w-2 h-2 bg-blue-300 rounded-full opacity-50 animate-pulse" style={{animationDelay: '2.5s'}}></div>
               </div>
               
               {/* Call-to-action button positioned in bottom right */}
-              <div className="absolute bottom-0 right-0">
+              <div className="absolute bottom-8 right-4">
                 <a 
                   href="#order" 
-                  className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-2xl text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
                 >
                   Замовити воду
                 </a>
