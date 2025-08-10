@@ -69,7 +69,7 @@ function App() {
         {/* Top contact bar */}
         <div className="bg-white bg-opacity-60 backdrop-blur-sm py-4 px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <div className="flex items-center space-x-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 w-full md:w-auto">
               {/* Company Logo and Name */}
               <div className="flex items-center space-x-3">
                 <div className="bg-blue-600 p-2 rounded-lg">
@@ -81,8 +81,8 @@ function App() {
                 </div>
               </div>
               
-              {/* Social Media and Phone */}
-              <div className="flex items-center space-x-2">
+              {/* Social Media Icons - Mobile: above phone */}
+              <div className="flex items-center space-x-2 md:order-none order-first">
                 <a
                   href="https://t.me/akvadnipro"
                   target="_blank"
@@ -99,9 +99,13 @@ function App() {
                 >
                   <Instagram className="w-4 h-4 text-white" />
                 </a>
+              </div>
+              
+              {/* Phone Number - Mobile: below icons */}
+              <div className="flex items-center">
                 <a 
                   href="tel:+380671234567" 
-                  className="text-blue-800 hover:text-blue-900 font-bold text-lg transition-colors"
+                  className="text-blue-800 hover:text-blue-900 font-bold text-lg md:text-lg text-base transition-colors"
                 >
                   +380 67 123 45 67
                 </a>
@@ -120,29 +124,29 @@ function App() {
         </div>
 
         {/* Main hero content */}
-        <div className="py-16 px-4 relative z-10" style={{
+        <div className="py-8 md:py-16 px-4 relative z-10" style={{
           backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
           backgroundSize: 'contain',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '500px'
+          minHeight: '400px'
         }}>
           {/* Gradient overlay for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-white/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/30 to-white/20 md:to-white/5 pointer-events-none"></div>
           
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-6xl font-bold text-blue-900 mb-4 md:mb-6 leading-tight">
                 Чиста вода —<br/>
                 без зайвих рухів
               </h2>
-              <p className="text-xl md:text-2xl text-blue-700 mb-8 font-medium">
+              <p className="text-lg md:text-2xl text-blue-700 mb-6 md:mb-8 font-medium">
                 Доставка питної води<br/>
                 для дому, офісу та бізнесу
               </p>
               <a 
                 href="#order" 
-                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Замовити воду
               </a>
@@ -152,12 +156,12 @@ function App() {
       </header>
 
       {/* About */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-12 md:py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">
             Чиста вода для вашого дому та офісу в Дніпрі
           </h3>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto">
             Ми працюємо в Дніпрі вже понад 8 років і доставляємо високоякісну питну воду 
             від перевірених виробників. Наша вода проходить багатоступеневу очистку та 
             регулярно тестується в сертифікованих лабораторіях.
