@@ -69,7 +69,7 @@ function App() {
         {/* Top contact bar */}
         <div className="bg-white bg-opacity-60 backdrop-blur-sm py-4 px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 w-full md:w-auto">
+            <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 w-full">
               {/* Company Logo and Name */}
               <div className="flex items-center space-x-3">
                 <div className="bg-blue-600 p-2 rounded-lg">
@@ -81,8 +81,8 @@ function App() {
                 </div>
               </div>
               
-              {/* Social Media Icons - Mobile: above phone */}
-              <div className="flex items-center space-x-2 md:order-none order-first">
+              {/* Social Media Icons and Phone - Mobile: right side */}
+              <div className="flex flex-col items-end md:items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2 ml-auto md:ml-0">
                 <a
                   href="https://t.me/akvadnipro"
                   target="_blank"
@@ -99,13 +99,11 @@ function App() {
                 >
                   <Instagram className="w-4 h-4 text-white" />
                 </a>
-              </div>
-              
-              {/* Phone Number - Mobile: below icons */}
-              <div className="flex items-center">
+                
+                {/* Phone Number */}
                 <a 
                   href="tel:+380671234567" 
-                  className="text-blue-800 hover:text-blue-900 font-bold text-lg md:text-lg text-base transition-colors"
+                  className="text-blue-800 hover:text-blue-900 font-bold text-base md:text-lg transition-colors"
                 >
                   +380 67 123 45 67
                 </a>
@@ -127,12 +125,12 @@ function App() {
         <div className="py-8 md:py-16 px-4 relative z-10" style={{
           backgroundImage: 'url(https://i.ibb.co/TfvZdtm/Add-more-droplets-to.png)',
           backgroundSize: 'contain',
-          backgroundPosition: 'right center',
+          backgroundPosition: 'right top',
           backgroundRepeat: 'no-repeat',
           minHeight: '400px'
         }}>
           {/* Gradient overlay for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/30 to-white/20 md:to-white/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/30 to-white/5 pointer-events-none"></div>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="relative z-10">
